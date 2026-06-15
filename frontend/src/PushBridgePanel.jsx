@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = process.env.REACT_APP_API_URL || "https://pushbridge-production.up.railway.app"; // Replace with your Railway URL
+const API = "https://pushbridge-production.up.railway.app"; // Replace with your Railway URL
 
 const DEFAULT_BRANDS = [
   { slug: "fedmonetize", name: "FedMonetizeChain", color: "#22c55e" },
