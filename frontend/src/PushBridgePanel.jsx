@@ -1,10 +1,6 @@
-import PushBridgePanel from './PushBridgePanel';
-export default function App() {
-  return <PushBridgePanel />;
-}
 import { useState, useEffect } from "react";
 
-const API = "https://your-railway-app.up.railway.app"; // Replace with your Railway URL
+const API = process.env.REACT_APP_API_URL || "https://pushbridge-production.up.railway.app"; // Replace with your Railway URL
 
 const DEFAULT_BRANDS = [
   { slug: "fedmonetize", name: "FedMonetizeChain", color: "#22c55e" },
@@ -195,7 +191,7 @@ export default function PushBridgePanel() {
               <div style={{ background: "#0a1628", border: "1px solid #1e2d45", borderRadius: 12, padding: 24 }}>
                 <h3 style={{ margin: "0 0 16px", fontSize: 13, color: "#64748b", textTransform: "uppercase", letterSpacing: ".05em" }}>Push Preview</h3>
                 <div style={{ background: "#1e2d45", borderRadius: 12, padding: 16, display: "flex", gap: 12, alignItems: "flex-start" }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 8, background: activeBrand ? activeBrand.color : "#22c55e", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>🔔</div>
+                  <div style={{ width: 40, height: 40, borderRadius: 8, background: activeBrand ? activeBrand.color : "#22c55e", flexShrink: 0, display: "flnItems: "center", justifyContent: "center", fontSize: 20 }}>🔔</div>
                   <div>
                     <div style={{ fontWeight: 700, fontSize: 13, color: "#e2e8f0", marginBottom: 4 }}>{form.title || "Notification Title"}</div>
                     <div style={{ fontSize: 12, color: "#94a3b8", lineHeight: 1.5 }}>{form.body || "Notification body will appear here."}</div>
